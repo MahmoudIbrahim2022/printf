@@ -28,7 +28,7 @@ int print_hex(va_list ap, params_t *params)
 		*--str = 'x';
 		*--str = '0';
 	}
-	params->unsign = l;
+	params->unsign = 1;
 	return (c += print_number(str, params));
 }
 
@@ -60,7 +60,7 @@ int print_HEX(va_list ap, params_t *params)
 		*--str = 'X';
 		*--str = '0';
 	}
-	params->unsign = l;
+	params->unsign = 1;
 	return (c += print_number(str, params));
 }
 
@@ -112,7 +112,7 @@ int print_octal(va_list ap, params_t *params)
 	if (params->hashtag_flag && l)
 		*--str = '0';
 
-	params->unsign = l;
+	params->unsign = 1;
 	return (c += print_number(str, params));
 
 }
